@@ -1,0 +1,24 @@
+/*
+Theme Name: Grid
+Theme URI: http://phiffer.org/grid/
+Description: A simple responsive theme.
+Version: 0.2.0
+Author: Dan Phiffer
+Author URI: http://phiffer.org/
+Tags: simple, responsive
+*/
+@import 'variables';
+@import 'reset';
+@import 'fonts';
+@import 'elements';
+@import 'classes';
+@import 'structure';
+@import 'header';
+@import 'header_grid';
+@import 'articles';
+@import 'embed';
+@import 'pagination';
+@import 'sidebar';
+@import 'photos';
+@import 'tags';
+@import 'widgets'

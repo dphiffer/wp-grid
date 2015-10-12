@@ -1,0 +1,22 @@
+div.this-american-life {
+	border: 1px solid $light-gray !important;
+	padding-bottom: 0 !important;
+	
+	div.this-american-life-header {
+		height: 20px !important;
+	}
+	
+	div.air-date {
+		display: none !important;
+	}
+	
+	div.description {
+		line-height: 125% !important;
+		margin-bottom: 0 !important;
+		margin-top: 28px !important;
+	}
+	
+	div.copyright {
+		margin-top: -8px !important;
+	}
+}

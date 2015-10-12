@@ -1,0 +1,47 @@
+/* HTML 5 canvas displays a live feed of user activity. */
+
+#header-grid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+	&.visible {
+		transition: 1s ease-out opacity;
+		opacity: 1;
+	}
+}
+
+.header-grid-user {
+	position: absolute;
+	opacity: 0;
+	width: 10px;
+	height: 10px;
+	background: transparentize($primary, 0.75);
+
+	&.visible {
+		opacity: 1;
+	}
+
+	&.fade {
+		opacity: 0;
+		transition: 1s ease-out opacity;
+	}
+}
+
+#header-grid-pos {
+	border: 1px solid transparentize($primary, 0.25);
+}
+
+header.hover .header-grid-user.visible {
+	opacity: 1;
+}
+
+@media (min-width: $tablet) {
+	
+	.header-grid-user {
+		width: 15px;
+		height: 15px;
+	}
+	
+}

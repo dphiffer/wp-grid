@@ -1,0 +1,45 @@
+.wp-caption {
+	margin-bottom: 14px;
+}
+
+.wp-caption-text {
+	color: $gray;
+	margin-top: 12px;
+	font-size: 14px;
+	line-height: 150%;
+	
+	a {
+		color: $dark-gray;
+	}
+	
+	a:hover {
+		color: $primary;
+	}
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.permalink {
+	font-family: $arial;
+	display: inline-block;
+	padding: 0 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	line-height: 100%;
+}
+
+.permalink:hover {
+	color: $primary-inverse !important;
+	background: $primary !important;
+	text-decoration: none !important;
+}

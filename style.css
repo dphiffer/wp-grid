@@ -1,0 +1,753 @@
+/*
+Theme Name: Grid
+Theme URI: http://phiffer.org/grid/
+Description: A simple responsive theme.
+Version: 0.2.0
+Author: Dan Phiffer
+Author URI: http://phiffer.org/
+Tags: simple, responsive
+*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("css/source-sans-pro/EOT/SourceSansPro-Regular.eot") format("embedded-opentype"), url("css/source-sans-pro/WOFF/OTF/SourceSansPro-Regular.otf.woff") format("woff"), url("css/source-sans-pro/OTF/SourceSansPro-Regular.otf") format("opentype"), url("css/source-sans-pro/TTF/SourceSansPro-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("css/source-sans-pro/EOT/SourceSansPro-It.eot") format("embedded-opentype"), url("css/source-sans-pro/WOFF/OTF/SourceSansPro-It.otf.woff") format("woff"), url("css/source-sans-pro/OTF/SourceSansPro-It.otf") format("opentype"), url("css/source-sans-pro/TTF/SourceSansPro-It.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("css/source-sans-pro/EOT/SourceSansPro-Semibold.eot") format("embedded-opentype"), url("css/source-sans-pro/WOFF/OTF/SourceSansPro-Semibold.otf.woff") format("woff"), url("css/source-sans-pro/OTF/SourceSansPro-Semibold.otf") format("opentype"), url("css/source-sans-pro/TTF/SourceSansPro-Semibold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("css/source-sans-pro/EOT/SourceSansPro-SemiboldIt.eot") format("embedded-opentype"), url("css/source-sans-pro/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff") format("woff"), url("css/source-sans-pro/OTF/SourceSansPro-SemiboldIt.otf") format("opentype"), url("css/source-sans-pro/TTF/SourceSansPro-SemiboldIt.ttf") format("truetype"); }
+body {
+  font: 16px/28px "Source Sans Pro", "Helvetica Neue", sans-serif;
+  color: #222222;
+  background: #f2f2f2; }
+
+a {
+  color: #dd1974; }
+
+a:hover {
+  color: rgba(221, 25, 116, 0.7); }
+
+h1, h2, h3 {
+  font-weight: 600; }
+
+h3 {
+  text-transform: uppercase; }
+
+p, ol, ul {
+  margin-bottom: 14px; }
+
+iframe {
+  vertical-align: top; }
+
+img {
+  vertical-align: top; }
+
+figure img,
+.wp-caption img {
+  max-width: 100%;
+  height: auto; }
+
+blockquote {
+  border-left: 4px solid #dedede;
+  padding-left: 20px; }
+
+.wp-caption {
+  margin-bottom: 14px; }
+
+.wp-caption-text {
+  color: #808080;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 150%; }
+  .wp-caption-text a {
+    color: #666666; }
+  .wp-caption-text a:hover {
+    color: #dd1974; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.clear {
+  clear: both; }
+
+.permalink {
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  padding: 0 3px;
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 100%; }
+
+.permalink:hover {
+  color: #ffffff !important;
+  background: #dd1974 !important;
+  text-decoration: none !important; }
+
+/* By default we have one column, and everything is box-sizing: border-box. */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+#page {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff; }
+
+@media (min-width: 768px) {
+  /* Switch to a two-column layout. */
+  #main {
+    float: left;
+    width: 71.35%;
+    /* (24 + 500 + 24) / 768 */ }
+
+  #sidebar {
+    float: left;
+    width: 28.65%;
+    /* 1 - (24 + 500 + 24) / 768 */ }
+
+  footer {
+    clear: both; } }
+@media (min-width: 971px) {
+  /* Readjust the column widths to account for gutter tags. */
+  #main {
+    width: 74.46%;
+    /* (175 + 24 + 500 + 24) / 971 */
+    padding-left: calc(38.175% - 400px); }
+
+  #sidebar {
+    width: 25.54%;
+    /* 1 - (175 + 24 + 500 + 24) / 971 */ } }
+@media (min-width: 1171px) {
+  /* Make the sidebar two columns. */
+  #main {
+    width: 61.74%;
+    /* (175 + 24 + 500 + 24) / 1171 */
+    padding-left: 0; }
+
+  #sidebar {
+    width: 38.26%;
+    /* 1 - (175 + 24 + 500 + 24) / 1171 */ } }
+/* Header starts with <h1> and <h2> stacked vertically. */
+header {
+  position: relative;
+  height: 165px;
+  border-top: 4px solid #dd1974;
+  border-bottom: 1px solid #dedede;
+  overflow: hidden; }
+  header h1, header h2 {
+    z-index: 1; }
+  header h1 {
+    position: absolute;
+    font-size: 22px;
+    top: 30px;
+    left: 0;
+    padding: 3px 6px 3px 15px;
+    color: #ffffff;
+    background: rgba(221, 25, 116, 0.8);
+    text-align: right; }
+    header h1 a {
+      color: #ffffff;
+      text-decoration: none; }
+    header h1 a:hover {
+      color: #ffffff;
+      text-decoration: underline; }
+  header h2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25em;
+    bottom: 25px;
+    left: 15px;
+    width: 320px; }
+    header h2 img {
+      float: left;
+      border: 1px solid #dedede; }
+    header h2 .text {
+      float: left;
+      width: calc(100% - 48px);
+      max-width: 248px;
+      padding: 7px 0 0 12px; }
+      header h2 .text .bg {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 0 3px; }
+      header h2 .text:after {
+        content: "";
+        clear: both;
+        display: table; }
+
+@media (min-width: 548px) {
+  /* Header <h1> and <h2> float to left and right, respectively. */
+  header h1 {
+    top: 70px;
+    padding-left: calc(50% - 250px); }
+  header h2 {
+    top: 70px;
+    right: 0;
+    left: auto; }
+    header h2 .text {
+      width: calc(100% - 48px);
+      padding: 7px 21px 0 21px;
+      max-width: 272px; } }
+@media (min-width: 768px) {
+  /* <h1> and <h2> align with body text and sidebar, respectively. */
+  header {
+    height: 245px; }
+    header h1 {
+      top: 110px;
+      padding-left: calc(35.675% - 250px); }
+    header h2 {
+      top: 110px;
+      width: calc(28.65% + 50px + 24px); }
+      header h2 .text {
+        max-width: 250px; } }
+@media (min-width: 971px) {
+  /* Keep those <h1> and <h2>'s aligned! */
+  header h1 {
+    padding-left: 0;
+    width: calc(205px + (38.175% - 424px)); }
+  header h2 {
+    width: calc(25.54% + 50px + 24px); } }
+@media (min-width: 1171px) {
+  /* Scoot the <h2> over to account for the wider sidebar. */
+  header h1 {
+    width: 181px; }
+  header h2 {
+    width: calc(38.26% + 50px + 24px); } }
+/* HTML 5 canvas displays a live feed of user activity. */
+#header-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; }
+  #header-grid.visible {
+    transition: 1s ease-out opacity;
+    opacity: 1; }
+
+.header-grid-user {
+  position: absolute;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(221, 25, 116, 0.25); }
+  .header-grid-user.visible {
+    opacity: 1; }
+  .header-grid-user.fade {
+    opacity: 0;
+    transition: 1s ease-out opacity; }
+
+#header-grid-pos {
+  border: 1px solid rgba(221, 25, 116, 0.75); }
+
+header.hover .header-grid-user.visible {
+  opacity: 1; }
+
+@media (min-width: 768px) {
+  .header-grid-user {
+    width: 15px;
+    height: 15px; } }
+#main > article {
+  padding: 24px 15px 12px 15px;
+  max-width: 524px;
+  border-bottom: 1px solid #dedede; }
+  #main > article:last-child {
+    border-bottom: none; }
+  #main > article > .title {
+    font-size: 20px;
+    line-height: 125%;
+    margin-bottom: 12px; }
+    #main > article > .title a {
+      color: #222222;
+      text-decoration: none; }
+    #main > article > .title a.domain {
+      display: block; }
+    #main > article > .title a:hover {
+      color: #dd1974;
+      text-decoration: underline; }
+  #main > article > .tags-top,
+  #main > article > .clear {
+    display: none; }
+  #main > article .tags-bottom {
+    display: none; }
+  #main > article .tags-top li {
+    line-height: 125%; }
+  #main > article .tags {
+    list-style: none;
+    text-transform: lowercase; }
+  #main > article .tags li {
+    display: inline; }
+  #main > article .meta {
+    margin-top: 8px; }
+  #main > article .tags a,
+  #main > article .meta a,
+  #main > article a.domain,
+  #main > article .meta {
+    color: #808080;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none; }
+  #main > article .tags a {
+    color: #a8a8a8; }
+  #main > article .tags a:hover,
+  #main > article .meta a:hover,
+  #main > article a.domain:hover {
+    color: #dd1974;
+    text-decoration: underline; }
+  #main > article > .content figure .view-all {
+    display: block;
+    margin-top: 8px; }
+  #main > article > .content figure.float-left {
+    float: none; }
+    #main > article > .content figure.float-left img {
+      width: 100%; }
+  #main > article > .content figure.float-left + .clear {
+    display: none; }
+  #main > article > .content h3 {
+    margin: 14px 0 5px 0; }
+  #main > article > .content ol, #main > article > .content ul {
+    padding-left: 24px; }
+  #main > article > .content li {
+    margin-bottom: 6px; }
+  #main > article > .content ul > li {
+    list-style: square; }
+
+@media (min-width: 548px) {
+  #main > article {
+    padding: 36px 0 15px calc(50% - 250px);
+    width: calc(50% + 250px);
+    max-width: none; }
+    #main > article > .content figure {
+      padding: 6px 0; } }
+@media (min-width: 768px) {
+  #sidebar {
+    padding-right: 24px; }
+
+  #main > article {
+    margin: 0; } }
+@media (min-width: 971px) {
+  /* Tags appear in gutter instead of below the content. */
+  #main {
+    padding-right: 24px; }
+    #main > article {
+      padding: 48px 0 24px 0;
+      width: 699px;
+      margin: 0;
+      max-width: none; }
+      #main > article > .title {
+        padding-left: 199px; }
+      #main > article > .content {
+        float: right;
+        width: 500px; }
+      #main > article .tags-top {
+        display: block;
+        float: left;
+        width: 199px;
+        padding-right: 24px; }
+        #main > article .tags-top li {
+          display: list-item;
+          text-align: right; }
+      #main > article > .clear {
+        display: block; }
+      #main > article .tags-bottom {
+        display: none; } }
+#main > article > .content .embed-placeholder {
+  margin: 8px 0;
+  position: relative;
+  cursor: pointer; }
+  #main > article > .content .embed-placeholder:after {
+    content: "";
+    width: 75px;
+    height: 60px;
+    background-color: rgba(34, 34, 34, 0.8);
+    background-image: url("img/embed-play.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 37px 37px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -30px 0 0 -37px;
+    border-radius: 15px; }
+  #main > article > .content .embed-placeholder:hover:after {
+    background-color: #dd1974; }
+  #main > article > .content .embed-placeholder.playing:after {
+    display: none; }
+  #main > article > .content .embed-placeholder .iframe-wrapper {
+    position: relative;
+    height: 0; }
+  #main > article > .content .embed-placeholder .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+#pagination {
+  max-width: 548px;
+  margin: 0 auto;
+  padding: 15px 15px 30px 15px; }
+  #pagination .posts {
+    display: none;
+    line-height: 125%;
+    margin: 14px -3px;
+    font-size: 14px; }
+    #pagination .posts a {
+      display: inline-block;
+      color: #a8a8a8;
+      text-decoration: none; }
+      #pagination .posts a .permalink {
+        line-height: 125%; }
+    #pagination .posts .page:hover {
+      background: rgba(221, 25, 116, 0.1); }
+      #pagination .posts .page:hover a.permalink {
+        color: #666666; }
+    #pagination .posts .current {
+      background: #f2f2f2; }
+      #pagination .posts .current a.permalink {
+        color: #666666; }
+
+@media (min-width: 768px) {
+  #pagination .posts {
+    display: block; } }
+@media (min-width: 971px) {
+  #pagination {
+    max-width: none;
+    width: 723px;
+    padding-left: 199px;
+    margin: 0; } }
+/* Sidebar appears below the main content, by default. */
+#sidebar {
+  padding-bottom: 30px;
+  background: #f2f2f2; }
+  #sidebar h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 0 5px 0;
+    color: #dd1974; }
+  #sidebar li {
+    list-style: none; }
+  #sidebar a {
+    color: #808080;
+    text-decoration: none; }
+  #sidebar a:hover {
+    color: #dd1974;
+    text-decoration: underline; }
+  #sidebar p {
+    margin: 0; }
+  #sidebar .column {
+    padding-left: 15px; }
+  #sidebar .clear {
+    display: none; }
+  #sidebar .tags {
+    text-transform: lowercase;
+    line-height: 150%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 6px; }
+    #sidebar .tags a {
+      margin-right: 10px; }
+
+@media (min-width: 548px) {
+  /* Sidebar gets two columns, still appears below main content. */
+  #sidebar section {
+    margin: 0 auto;
+    max-width: 548px;
+    border-top: 1px solid #dedede;
+    padding-bottom: 36px; }
+  #sidebar section:first-child {
+    border-top: none; }
+  #sidebar .column {
+    float: left;
+    width: calc(50% - 12px); }
+  #sidebar .clear {
+    display: inline; } }
+@media (min-width: 768px) {
+  /* Sidebar moves to the side of the main content, goes back to one column. */
+  #sidebar {
+    background: transparent;
+    padding-top: 35px; }
+    #sidebar .column {
+      float: none;
+      width: 100%;
+      padding-left: 0; }
+    #sidebar .clear {
+      display: none; } }
+@media (min-width: 971px) {
+  /* Sidebar needs some padding on the right once the gutter tags show up. */
+  #sidebar section {
+    padding-right: 24px; } }
+@media (min-width: 1171px) {
+  /* Switch back to a two-column sidebar layout. */
+  #sidebar section {
+    margin: 0 auto;
+    max-width: 548px; }
+  #sidebar .column {
+    float: left;
+    width: 50%; }
+    #sidebar .column:first-child {
+      padding-right: 24px; }
+  #sidebar .clear {
+    display: inline; } }
+body.single-category-photos #main > article {
+  padding-bottom: 24px; }
+  body.single-category-photos #main > article .gallery {
+    padding: 6px 0 2px 0; }
+  body.single-category-photos #main > article figure {
+    margin: 0 -15px 2px -15px;
+    padding: 0; }
+  body.single-category-photos #main > article .tags-top {
+    display: none; }
+  body.single-category-photos #main > article .tags-bottom {
+    display: inline; }
+    body.single-category-photos #main > article .tags-bottom .tags {
+      padding-left: 0; }
+    body.single-category-photos #main > article .tags-bottom ul {
+      display: inline; }
+    body.single-category-photos #main > article .tags-bottom li {
+      margin-right: 5px; }
+      body.single-category-photos #main > article .tags-bottom li:last-child {
+        margin-right: 0; }
+body.single-category-photos #sidebar,
+body.single-category-photos #main {
+  float: none; }
+body.single-category-photos #sidebar {
+  background: #f2f2f2; }
+body.single-category-photos #more-photos {
+  padding-top: 12px; }
+  body.single-category-photos #more-photos .older, body.single-category-photos #more-photos .newer {
+    width: calc(50% - 12px); }
+    body.single-category-photos #more-photos .older img, body.single-category-photos #more-photos .newer img {
+      margin-top: 6px;
+      width: 100%;
+      height: auto; }
+  body.single-category-photos #more-photos .older {
+    float: left; }
+  body.single-category-photos #more-photos .newer {
+    float: right; }
+
+@media (min-width: 548px) {
+  body.single-category-photos header h1 {
+    padding-left: 15px; }
+  body.single-category-photos #main > article {
+    max-width: 1028px;
+    padding-left: 15px;
+    width: 100%; }
+    body.single-category-photos #main > article .content .title,
+    body.single-category-photos #main > article .content .text,
+    body.single-category-photos #main > article .content p {
+      max-width: 500px; }
+    body.single-category-photos #main > article figure.float-left {
+      float: left;
+      width: calc(50% + 14px); }
+    body.single-category-photos #main > article figure.float-left + figure.float-left {
+      float: right; }
+  body.single-category-photos #sidebar section {
+    max-width: none; }
+  body.single-category-photos #sidebar .column {
+    padding-left: 24px; } }
+@media (min-width: 768px) {
+  body.single-category-photos header h1 {
+    padding-left: 24px; }
+  body.single-category-photos #main {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px; }
+    body.single-category-photos #main > article {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 12px;
+      max-width: 980px; }
+      body.single-category-photos #main > article figure {
+        margin: 0 -24px 4px -24px; }
+      body.single-category-photos #main > article figure.float-left {
+        width: calc(50% + 22px); }
+  body.single-category-photos #sidebar {
+    width: auto;
+    max-width: 1028px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 0;
+    background: transparent; }
+    body.single-category-photos #sidebar .holder {
+      background: #f2f2f2;
+      padding-bottom: 48px; }
+    body.single-category-photos #sidebar section {
+      padding: 0;
+      border-top: 0; }
+      body.single-category-photos #sidebar section:last-child:after {
+        content: "";
+        clear: both;
+        display: table; }
+    body.single-category-photos #sidebar .column {
+      float: left;
+      width: calc(25% - 6px); } }
+@media (min-width: 971px) {
+  body.single-category-photos header h1 {
+    width: auto;
+    padding-left: calc(50% - 490px - 24px); }
+    body.single-category-photos header h1 a {
+      margin-left: 24px; }
+  body.single-category-photos #main > article {
+    max-width: 980px;
+    width: auto;
+    margin: 0 auto; }
+    body.single-category-photos #main > article figure {
+      margin: 0 0 4px 0; }
+    body.single-category-photos #main > article figure.float-left {
+      width: calc(50% - 2px); }
+    body.single-category-photos #main > article .title {
+      padding-left: 0; }
+    body.single-category-photos #main > article .content {
+      float: none;
+      width: auto;
+      padding-right: 0; }
+  body.single-category-photos #more-photos {
+    padding-top: 24px; } }
+@media (min-width: 1171px) {
+  body.single-category-photos header h2 {
+    right: 0;
+    padding-right: calc(50% - 490px);
+    width: calc(50% - 490px + 320px); }
+  body.single-category-photos #sidebar .clear {
+    display: none; } }
+body.page-template-tags #main > article > .content a {
+  margin-right: 10px; }
+body.page-template-tags #main > article > .content .tags a.tag-color-1 {
+  color: rgba(168, 168, 168, 0.75); }
+body.page-template-tags #main > article > .content .tags a.tag-color-2 {
+  color: #a8a8a8; }
+body.page-template-tags #main > article > .content .tags a.tag-color-3 {
+  color: rgba(221, 25, 116, 0.5); }
+body.page-template-tags #main > article > .content .tags a.tag-color-4 {
+  color: rgba(221, 25, 116, 0.75); }
+body.page-template-tags #main > article > .content .tags a.tag-color-5 {
+  color: #dd1974; }
+
+@media (min-width: 971px) {
+  body.page-template-tags #main > article .content {
+    padding-bottom: 48px; } }
+div.this-american-life {
+  border: 1px solid #dedede !important;
+  padding-bottom: 0 !important; }
+  div.this-american-life div.this-american-life-header {
+    height: 20px !important; }
+  div.this-american-life div.air-date {
+    display: none !important; }
+  div.this-american-life div.description {
+    line-height: 125% !important;
+    margin-bottom: 0 !important;
+    margin-top: 28px !important; }
+  div.this-american-life div.copyright {
+    margin-top: -8px !important; }
+
+/*# sourceMappingURL=style.css.map */

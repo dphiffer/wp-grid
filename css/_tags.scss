@@ -1,0 +1,41 @@
+body.page-template-tags {
+	
+	#main > article > .content {
+		
+		a {
+			margin-right: 10px;
+		}
+
+		.tags {
+			a.tag-color-1 {
+				color: transparentize($medium-gray, 0.25);
+			}
+			
+			a.tag-color-2 {
+				color: $medium-gray;
+			}
+			
+			a.tag-color-3 {
+				color: transparentize($primary, 0.5);
+			}
+			
+			a.tag-color-4 {
+				color: transparentize($primary, 0.25);
+			}
+			
+			a.tag-color-5 {
+				color: $primary;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop) {
+	
+	body.page-template-tags {
+		
+		#main > article .content {
+			padding-bottom: 48px;
+		}
+	}
+}

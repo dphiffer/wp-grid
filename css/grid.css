@@ -1,0 +1,419 @@
+/* Fonts */
+/* Colors */
+/* Breakpoints */
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("source-sans-pro/EOT/SourceSansPro-Regular.eot") format("embedded-opentype"), url("source-sans-pro/WOFF/OTF/SourceSansPro-Regular.otf.woff") format("woff"), url("source-sans-pro/OTF/SourceSansPro-Regular.otf") format("opentype"), url("source-sans-pro/TTF/SourceSansPro-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("source-sans-pro/EOT/SourceSansPro-It.eot") format("embedded-opentype"), url("source-sans-pro/WOFF/OTF/SourceSansPro-It.otf.woff") format("woff"), url("source-sans-pro/OTF/SourceSansPro-It.otf") format("opentype"), url("source-sans-pro/TTF/SourceSansPro-It.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("source-sans-pro/EOT/SourceSansPro-Semibold.eot") format("embedded-opentype"), url("source-sans-pro/WOFF/OTF/SourceSansPro-Semibold.otf.woff") format("woff"), url("source-sans-pro/OTF/SourceSansPro-Semibold.otf") format("opentype"), url("source-sans-pro/TTF/SourceSansPro-Semibold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("source-sans-pro/EOT/SourceSansPro-SemiboldIt.eot") format("embedded-opentype"), url("source-sans-pro/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff") format("woff"), url("source-sans-pro/OTF/SourceSansPro-SemiboldIt.otf") format("opentype"), url("source-sans-pro/TTF/SourceSansPro-SemiboldIt.ttf") format("truetype"); }
+body {
+  font: 16px/28px "Source Sans Pro", "Helvetica Neue", sans-serif; }
+
+a {
+  color: #6e9931; }
+
+a:hover {
+  color: #a2cd54; }
+
+h1, h2, h3, h4 {
+  font-weight: 600; }
+
+p {
+  margin-bottom: 14px; }
+
+figure img {
+  max-width: 100%;
+  height: auto; }
+
+.clear {
+  clear: both; }
+
+/* By default we have one column, and everything is box-sizing: border-box. */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+#page {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto; }
+
+@media (min-width: 768px) {
+  /* Switch to a two-column layout. */
+  #main {
+    float: left;
+    width: 71.35%;
+    /* (24 + 500 + 24) / 768 */ }
+
+  #sidebar {
+    float: left;
+    width: 28.65%;
+    /* 1 - (24 + 500 + 24) / 768 */ }
+
+  footer {
+    clear: both; } }
+@media (min-width: 971px) {
+  /* Readjust the column widths to account for gutter tags. */
+  #main {
+    width: 74.46%;
+    /* (175 + 24 + 500 + 24) / 971 */
+    padding-left: calc(38.175% - 400px); }
+
+  #sidebar {
+    width: 25.54%;
+    /* 1 - (175 + 24 + 500 + 24) / 971 */ } }
+@media (min-width: 1171px) {
+  /* Make the sidebar two columns. */
+  #main {
+    width: 61.74%;
+    /* (175 + 24 + 500 + 24) / 1171 */
+    padding-left: 0; }
+
+  #sidebar {
+    width: 38.26%;
+    /* 1 - (175 + 24 + 500 + 24) / 1171 */ } }
+/* Header starts with <h1> and <h2> stacked vertically. */
+header {
+  position: relative;
+  height: 245px;
+  border-top: 4px solid #dd1974;
+  border-bottom: 1px solid #dedede;
+  overflow: hidden; }
+  header h1, header h2 {
+    z-index: 1; }
+  header h1 {
+    position: absolute;
+    font-size: 22px;
+    top: 64px;
+    left: 0;
+    padding: 3px 6px 3px 24px;
+    color: #ffffff;
+    background: rgba(221, 25, 116, 0.8);
+    text-align: right; }
+  header h2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25em;
+    bottom: 48px;
+    left: 24px;
+    width: 320px; }
+    header h2 img {
+      float: left;
+      border: 1px solid #dedede; }
+    header h2 .text {
+      float: left;
+      width: calc(100% - 48px);
+      max-width: 300px;
+      padding: 7px 0 0 21px; }
+      header h2 .text .bg {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 0 3px; }
+      header h2 .text:after {
+        content: "";
+        clear: both;
+        display: table; }
+
+@media (min-width: 548px) {
+  /* Header <h1> and <h2> float to left and right, respectively. */
+  header h1 {
+    top: 128px;
+    padding-left: calc(50% - 250px); }
+  header h2 {
+    right: 0;
+    left: auto;
+    top: 128px; }
+    header h2 .text {
+      width: calc(100% - 48px);
+      padding: 7px 21px 0 21px; } }
+@media (min-width: 768px) {
+  /* <h1> and <h2> align with body text and sidebar, respectively. */
+  header h1 {
+    padding-left: calc(35.675% - 250px); }
+  header h2 {
+    width: calc(28.65% + 50px + 24px); }
+    header h2 .text {
+      max-width: 250px; } }
+@media (min-width: 971px) {
+  /* Keep those <h1> and <h2>'s aligned! */
+  header h1 {
+    padding-left: 0;
+    width: calc(205px + (38.175% - 400px)); }
+  header h2 {
+    width: calc(25.54% + 50px + 24px); } }
+@media (min-width: 1171px) {
+  /* Scoot the <h2> over to account for the wider sidebar. */
+  header h1 {
+    width: 205px; }
+  header h2 {
+    width: calc(38.26% + 50px + 24px); } }
+/* HTML 5 canvas displays a live feed of user activity. */
+#header-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; }
+  #header-grid.visible {
+    transition: 1s ease-out opacity;
+    opacity: 1; }
+
+.header-grid-user {
+  position: absolute;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  background: rgba(221, 25, 116, 0.25); }
+  .header-grid-user.visible {
+    opacity: 1; }
+  .header-grid-user.fade {
+    opacity: 0;
+    transition: 1s ease-out opacity; }
+
+#header-grid-pos {
+  border: 1px solid rgba(221, 25, 116, 0.75); }
+
+#main > article {
+  padding: 24px;
+  max-width: 548px;
+  margin: 0 auto;
+  border-bottom: 1px solid #dedede; }
+  #main > article:last-child {
+    border-bottom: none; }
+  #main > article > .title {
+    font-size: 20px;
+    margin-bottom: 12px; }
+  #main > article > .tags-top,
+  #main > article > .clear {
+    display: none; }
+  #main > article .tags-bottom,
+  #main > article .tags-bottom ul {
+    display: inline; }
+  #main > article .tags-bottom li {
+    margin-right: 3px; }
+  #main > article .tags {
+    list-style: none;
+    text-transform: lowercase; }
+  #main > article .tags li {
+    display: inline; }
+  #main > article .tags a,
+  #main > article .meta a,
+  #main > article .meta {
+    color: #808080;
+    text-decoration: none; }
+  #main > article .tags a:hover,
+  #main > article .meta a:hover {
+    color: #dd1974;
+    text-decoration: underline; }
+  #main > article > .content > figure {
+    padding: 6px 0;
+    margin: 0 -24px; }
+
+@media (min-width: 548px) {
+  /* Images no longer sit snug against the browser edge. */
+  #main > article > .content > figure {
+    margin: 0; } }
+@media (min-width: 971px) {
+  /* Tags appear in gutter instead of below the content. */
+  #main > article {
+    padding: 48px 0 24px 0;
+    width: 723px;
+    margin: 0;
+    max-width: none; }
+    #main > article > .title {
+      padding-left: 199px; }
+    #main > article > .content {
+      float: right;
+      width: 524px;
+      padding-right: 24px; }
+    #main > article .tags-top {
+      display: block;
+      float: left;
+      width: 199px;
+      padding-right: 24px; }
+      #main > article .tags-top li {
+        display: list-item;
+        text-align: right; }
+    #main > article > .clear {
+      display: inline; }
+    #main > article .tags-bottom {
+      display: none; } }
+/* Sidebar appears below the main content, by default. */
+#sidebar {
+  padding-bottom: 48px;
+  background: #f2f2f2; }
+  #sidebar h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 26px 0 6px 0;
+    color: #dd1974; }
+  #sidebar li {
+    list-style: none; }
+  #sidebar a {
+    color: #808080;
+    text-decoration: none; }
+  #sidebar a:hover {
+    color: #dd1974;
+    text-decoration: underline; }
+  #sidebar p {
+    margin: 0; }
+  #sidebar .column {
+    padding: 0 24px;
+    max-width: 320px; }
+  #sidebar .clear {
+    display: none; }
+
+@media (min-width: 548px) {
+  /* Sidebar gets two columns, still appears below main content. */
+  #sidebar section {
+    margin: 0 auto;
+    max-width: 548px; }
+  #sidebar .column {
+    float: left;
+    width: 50%; }
+  #sidebar .column:first-child {
+    padding-right: 0; }
+  #sidebar .clear {
+    display: inline; } }
+@media (min-width: 768px) {
+  /* Sidebar moves to the side of the main content, goes back to one column. */
+  #sidebar {
+    background: transparent;
+    padding-top: 24px; }
+    #sidebar .column {
+      float: none;
+      width: 100%;
+      padding-left: 0; }
+    #sidebar .clear {
+      display: none; } }
+@media (min-width: 768px) {
+  /* Sidebar needs some padding on the right once the gutter tags show up. */
+  #sidebar section {
+    padding-right: 24px; } }
+@media (min-width: 1171px) {
+  /* Switch back to a two-column sidebar layout. */
+  #sidebar section {
+    margin: 0 auto;
+    max-width: 548px;
+    border-top: 1px solid #dedede;
+    padding-bottom: 48px; }
+  #sidebar section:first-child {
+    border-top: none; }
+  #sidebar .column {
+    float: left;
+    width: 50%; }
+  #sidebar .column:first-child {
+    padding-right: 24px; }
+  #sidebar .clear {
+    display: inline; } }
+
+/*# sourceMappingURL=grid.css.map */

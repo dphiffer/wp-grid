@@ -1,0 +1,62 @@
+/* By default we have one column, and everything is box-sizing: border-box. */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#page {
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+	background: $background;
+}
+
+@media (min-width: $tablet) {
+	/* Switch to a two-column layout. */
+
+	#main {
+		float: left;
+		width: 71.35%; /* (24 + 500 + 24) / 768 */
+	}
+
+	#sidebar {
+		float: left;
+		width: 28.65%; /* 1 - (24 + 500 + 24) / 768 */
+	}
+
+	footer {
+		clear: both;
+	}
+
+}
+
+@media (min-width: $desktop) {
+	/* Readjust the column widths to account for gutter tags. */
+	
+	#main {
+		width: 74.46%; /* (175 + 24 + 500 + 24) / 971 */
+		padding-left: calc(38.175% - 400px);
+	}
+	
+	#sidebar {
+		width: 25.54%; /* 1 - (175 + 24 + 500 + 24) / 971 */
+	}
+	
+}
+
+@media (min-width: $wide-screen) {
+	/* Make the sidebar two columns. */
+	
+	#main {
+		width: 61.74%; /* (175 + 24 + 500 + 24) / 1171 */
+		padding-left: 0;
+	}
+	
+	#sidebar {
+		width: 38.26%; /* 1 - (175 + 24 + 500 + 24) / 1171 */
+	}
+}

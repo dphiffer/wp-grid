@@ -1,0 +1,44 @@
+body {
+	font: 16px/28px $source-sans;
+	color: $text;
+	background: $lighter-gray;
+}
+
+a {
+	color: $primary;
+}
+
+a:hover {
+	color: transparentize($primary, 0.3);
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+p, ol, ul {
+	margin-bottom: 14px;
+}
+
+iframe {
+	vertical-align: top;
+}
+
+img {
+	vertical-align: top;
+}
+
+figure img,
+.wp-caption img {
+	max-width: 100%;
+	height: auto;
+}
+
+blockquote {
+	border-left: 4px solid $light-gray;
+	padding-left: 20px;
+}

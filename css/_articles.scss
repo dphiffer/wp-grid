@@ -1,0 +1,185 @@
+#main > article {
+	padding: 24px 15px 12px 15px;
+	max-width: 524px;
+	border-bottom: 1px solid $light-gray;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	> .title {
+		font-size: 20px;
+		line-height: 125%;
+		margin-bottom: 12px;
+
+		a {
+			color: $text;
+			text-decoration: none;
+		}
+
+		a.domain {
+			display: block;
+		}
+
+		a:hover {
+			color: $primary;
+			text-decoration: underline;
+		}
+	}
+
+	> .tags-top,
+	> .clear {
+		display: none;
+	}
+	
+	.tags-bottom {
+		display: none;
+	}
+
+	.tags-top li {
+		line-height: 125%;
+	}
+
+	.tags {
+		list-style: none;
+		text-transform: lowercase;
+	}
+
+	.tags li {
+		display: inline;
+	}
+
+	.meta {
+		margin-top: 8px;
+	}
+
+	.tags a,
+	.meta a,
+	a.domain,
+	.meta {
+		color: $gray;
+		font-size: 14px;
+		font-weight: normal;
+		text-decoration: none;
+	}
+	
+	.tags a {
+		color: $medium-gray;
+	}
+
+	.tags a:hover,
+	.meta a:hover,
+	a.domain:hover {
+		color: $primary;
+		text-decoration: underline;
+	}
+
+	> .content figure {
+
+		.view-all {
+			display: block;
+			margin-top: 8px;
+		}
+		
+		&.float-left {
+			float: none;
+			
+			img {
+				width: 100%;
+			}
+		}
+		
+		&.float-left + .clear {
+			display: none;
+		}
+	}
+	
+	> .content {
+		
+		h3 {
+			margin: 14px 0 5px 0;
+		}
+		
+		ol, ul {
+			padding-left: 24px;
+		}
+		
+		li {
+			margin-bottom: 6px;
+		}
+		
+		ul > li {
+			list-style: square;
+		}
+	}
+}
+
+@media (min-width: $phablet) {
+
+	#main > article {
+		padding: 36px 0 15px calc(50% - 250px);
+		width: calc(50% + 250px);
+		max-width: none;
+		
+		> .content figure {
+			padding: 6px 0;
+		}
+	}
+
+}
+
+@media (min-width: $tablet) {
+
+	#sidebar {
+		padding-right: 24px;
+	}
+
+	#main > article {
+		margin: 0;
+	}
+
+}
+
+@media (min-width: $desktop) {
+	/* Tags appear in gutter instead of below the content. */
+	
+	#main {
+		padding-right: 24px;
+
+		> article {
+			padding: 48px 0 24px 0;
+			width: 699px;
+			margin: 0;
+			max-width: none;
+
+			> .title {
+				padding-left: 199px;
+			}
+
+			> .content {
+				float: right;
+				width: 500px;
+			}
+			
+			.tags-top {
+				display: block;
+				float: left;
+				width: 199px;
+				padding-right: 24px;
+				
+				li {
+					display: list-item;
+					text-align: right;
+				}
+			}
+
+			> .clear {
+				display: block;
+			}
+
+			.tags-bottom {
+				display: none;
+			}
+		}
+	}
+}

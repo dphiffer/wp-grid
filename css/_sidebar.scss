@@ -1,0 +1,131 @@
+/* Sidebar appears below the main content, by default. */
+
+#sidebar {
+	padding-bottom: 30px;
+	background: $lighter-gray;
+
+	h2 {
+		font-size: 14px;
+		text-transform: uppercase;
+		padding: 15px 0 5px 0;
+		color: $primary;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		color: $gray;
+		text-decoration: none;
+	}
+
+ 	a:hover {
+		color: $primary;
+		text-decoration: underline;
+	}
+	
+	p {
+		margin: 0;
+	}
+
+	.column {
+		padding-left: 15px;
+	}
+	
+	.clear {
+		display: none;
+	}
+	
+	.tags {
+		text-transform: lowercase;
+		line-height: 150%;
+		padding-bottom: 12px;
+		border-bottom: 1px solid $light-gray;
+		margin-bottom: 6px;
+		
+		a {
+			margin-right: 10px;
+		}
+	}
+}
+
+@media (min-width: $phablet) {
+	/* Sidebar gets two columns, still appears below main content. */
+	
+	#sidebar {
+
+		section {
+			margin: 0 auto;
+			max-width: 548px;
+			border-top: 1px solid $light-gray;
+			padding-bottom: 36px;
+		}
+		
+		section:first-child {
+			border-top: none;
+		}
+
+		.column {
+			float: left;
+			width: calc(50% - 12px);
+		}
+		
+		.clear {
+			display: inline;
+		}
+	}
+}
+
+@media (min-width: $tablet) {
+	/* Sidebar moves to the side of the main content, goes back to one column. */
+	
+	#sidebar {
+		background: transparent;
+		padding-top: 35px;
+		
+		.column {
+			float: none;
+			width: 100%;
+			padding-left: 0;
+		}
+		
+		.clear {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: $desktop) {
+	/* Sidebar needs some padding on the right once the gutter tags show up. */
+
+	#sidebar section {
+		padding-right: 24px;
+	}
+
+}
+
+@media (min-width: $wide-screen) {
+	/* Switch back to a two-column sidebar layout. */
+	
+	#sidebar {
+
+		section {
+			margin: 0 auto;
+			max-width: 548px;
+		}
+
+		.column {
+			float: left;
+			width: 50%;
+			
+			&:first-child {
+				padding-right: 24px;
+			}
+		}
+
+		.clear {
+			display: inline;
+		}
+	}
+}

@@ -1,0 +1,145 @@
+/* Header starts with <h1> and <h2> stacked vertically. */
+
+header {
+	position: relative;
+	height: 165px;
+	border-top: 4px solid $primary;
+	border-bottom: 1px solid $light-gray;
+	overflow: hidden;
+
+	h1, h2 {
+		z-index: 1;
+	}
+
+	h1 {
+		position: absolute;
+		font-size: 22px;
+		top: 30px;
+		left: 0;
+		padding: 3px 6px 3px 15px;
+		color: $primary-inverse;
+		background: transparentize($primary, 0.2);
+		text-align: right;
+
+		a {
+			color: $primary-inverse;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $primary-inverse;
+			text-decoration: underline;
+		}
+	}
+
+	h2 {
+		position: absolute;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.25em;
+		bottom: 25px;
+		left: 15px;
+		width: 320px;
+
+		img {
+			float: left;
+			border: 1px solid $light-gray;
+		}
+
+		.text {
+			float: left;
+			width: calc(100% - 48px);
+			max-width: 248px;
+			padding: 7px 0 0 12px;
+
+			.bg {
+				display: inline-block;
+				background: transparentize($primary-inverse, 0.2);
+				padding: 0 3px;
+			}
+
+			&:after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+		}
+	}
+}
+
+@media (min-width: $phablet) {
+	/* Header <h1> and <h2> float to left and right, respectively. */
+
+	header {
+
+		h1 {
+			top: 70px;
+			padding-left: calc(50% - 250px);
+		}
+
+		h2 {
+			top: 70px;
+			right: 0;
+			left: auto;
+
+			.text {
+				width: calc(100% - 48px);
+				padding: 7px 21px 0 21px;
+				max-width: 272px;
+			}
+		}
+	}
+}
+
+@media (min-width: $tablet) {
+	/* <h1> and <h2> align with body text and sidebar, respectively. */
+	
+	header {
+		height: 245px;
+
+		h1 {
+			top: 110px;
+			padding-left: calc(35.675% - 250px);
+		}
+		
+		h2 {
+			top: 110px;
+			width: calc(28.65% + 50px + 24px);
+			
+			.text {
+				max-width: 250px;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop) {
+	/* Keep those <h1> and <h2>'s aligned! */
+	
+	header {
+		
+		h1 {
+			padding-left: 0;
+			width: calc(205px + (38.175% - 424px));
+		}
+		
+		h2 {
+			width: calc(25.54% + 50px + 24px);
+		}
+	}
+}
+
+@media (min-width: $wide-screen) {
+	/* Scoot the <h2> over to account for the wider sidebar. */
+	
+	header {
+
+		h1 {
+			width: 181px;
+		}
+
+		h2 {
+			width: calc(38.26% + 50px + 24px);
+		}
+	}
+}

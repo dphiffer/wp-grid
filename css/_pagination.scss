@@ -1,0 +1,57 @@
+#pagination {
+	max-width: 548px;
+	margin: 0 auto;
+	padding: 15px 15px 30px 15px;
+	
+	.posts {
+		display: none;
+		line-height: 125%;
+		margin: 14px -3px;
+		font-size: 14px;
+		
+		a {
+			display: inline-block;
+			color: $medium-gray;
+			text-decoration: none;
+			
+			.permalink {
+				line-height: 125%;
+			}
+		}
+		
+		.page:hover {
+			background: transparentize($primary, 0.9);
+			
+			a.permalink {
+				color: $dark-gray;
+			}
+		}
+		
+		.current {
+			background: $lighter-gray;
+			
+			a.permalink {
+				color: $dark-gray;
+			}
+		}
+	}
+}
+
+@media (min-width: $tablet) {
+	
+	#pagination .posts {
+		display: block;
+	}
+	
+}
+
+@media (min-width: $desktop) {
+	
+	#pagination {
+		max-width: none;
+		width: 723px;
+		padding-left: 199px;
+		margin: 0;
+	}
+	
+}
