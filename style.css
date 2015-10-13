@@ -344,6 +344,8 @@ header {
   .header-grid-user.fade {
     opacity: 0;
     transition: 1s ease-out opacity; }
+  .header-grid-user:hover {
+    border: 1px solid #dd1974; }
 
 #header-grid-pos {
   border: 1px solid rgba(221, 25, 116, 0.75); }

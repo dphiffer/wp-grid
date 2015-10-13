@@ -86,9 +86,11 @@ document.addEventListener('mousemove', function(e) {
 		timeouts.position = null;
 		pos.className = 'header-grid-user visible fade';
 	}, 250);
+	var href = '//' + location.hostname + location.pathname + location.search;
 	socket.emit('header-grid-position', {
 		i: gridI,
 		j: gridJ,
+		href: href,
 		title: document.title
 	});
 }, false);
@@ -163,6 +165,7 @@ socket.on('header-grid-updates', function(data) {
 });
 
 socket.on('header-grid-init', function(data) {
+	//console.log(JSON.stringify(data));
 	var row;
 	for (var i = 0; i < data.length; i++) {
 		if (data[i]) {
@@ -182,7 +185,12 @@ socket.on('header-grid-position', function(data) {
 	var id   = 'header-grid-' + data.from;
 	var user = document.getElementById(id);
 	if (!user) {
-		user = document.createElement('div');
+		if (data.href) {
+			user = document.createElement('a');
+			user.setAttribute('href', data.href);
+		} else {
+			user = document.createElement('div');
+		}
 		user.setAttribute('id', id);
 		header.appendChild(user);
 	}

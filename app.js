@@ -44,6 +44,7 @@ io.on('connection', function(socket) {
 			from: socket.id,
 			i: position.i,
 			j: position.j,
+			href: position.href,
 			title: position.title
 		});
 	});
