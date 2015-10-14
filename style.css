@@ -189,6 +189,9 @@ blockquote {
   background: #dd1974 !important;
   text-decoration: none !important; }
 
+.image-outline {
+  border: 1px solid #dedede; }
+
 /* By default we have one column, and everything is box-sizing: border-box. */
 html {
   box-sizing: border-box; }
