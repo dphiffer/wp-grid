@@ -190,7 +190,9 @@ blockquote {
   text-decoration: none !important; }
 
 .image-outline {
-  border: 1px solid #dedede; }
+  border: 1px solid #dedede;
+  padding: 0;
+  margin: 6px 0; }
 
 /* By default we have one column, and everything is box-sizing: border-box. */
 html {
