@@ -623,6 +623,8 @@ body.single-category-photos #main > article {
       margin-right: 5px; }
       body.single-category-photos #main > article .tags-bottom li:last-child {
         margin-right: 0; }
+  body.single-category-photos #main > article .embed-placeholder img {
+    width: 100%; }
 body.single-category-photos #sidebar,
 body.single-category-photos #main {
   float: none; }
