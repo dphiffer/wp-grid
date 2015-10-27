@@ -194,6 +194,14 @@ blockquote {
   padding: 0 !important;
   margin: 6px 0; }
 
+a.gray {
+  color: #808080; }
+  a.gray:hover {
+    color: #dd1974; }
+
+a.indent {
+  margin-left: 1.5em; }
+
 /* By default we have one column, and everything is box-sizing: border-box. */
 html {
   box-sizing: border-box; }

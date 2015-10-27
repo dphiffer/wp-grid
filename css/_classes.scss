@@ -49,3 +49,15 @@
 	padding: 0 !important;
 	margin: 6px 0;
 }
+
+a.gray {
+	color: $gray;
+	
+	&:hover {
+		color: $primary;
+	}
+}
+
+a.indent {
+	margin-left: 1.5em;
+}
