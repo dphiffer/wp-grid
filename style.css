@@ -202,6 +202,9 @@ a.gray {
 a.indent {
   margin-left: 1.5em; }
 
+.headroom {
+  margin-top: 1.5em; }
+
 /* By default we have one column, and everything is box-sizing: border-box. */
 html {
   box-sizing: border-box; }
