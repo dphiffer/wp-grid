@@ -585,6 +585,14 @@ function grid_strip_rel_attr($link) {
 }
 add_filter('the_category', 'grid_strip_rel_attr');
 
+function grid_protocol_agnostic_urls($content) {
+	$home_url = 'http://phiffer.org';
+	$protocol_agnostic_url = str_replace('http:', '', $home_url);
+	$content = str_replace($home_url, $protocol_agnostic_url, $content);
+	return $content;
+}
+add_filter('the_content', 'grid_protocol_agnostic_urls', 99);
+
 function grid_embed_placeholder($content) {
 	if (is_feed()) {
 		return $content;
@@ -607,24 +615,16 @@ function grid_embed_placeholder($content) {
 		$youtube_hosts = grid_youtube_hosts();
 		$vimeo_hosts = grid_vimeo_hosts();
 		if (!empty($embed['host']) && in_array($embed['host'], $youtube_hosts)) {
-			return grid_youtube_placeholder($embed, $matches[0]);
+			return str_replace('http:', '', grid_youtube_placeholder($embed, $matches[0]));
 		} else if (!empty($embed['host']) && in_array($embed['host'], $vimeo_hosts)) {
-			return grid_vimeo_placeholder($embed, $matches[0]);
+			return str_replace('http:', '', grid_vimeo_placeholder($embed, $matches[0]));
 		} else {
-			return grid_generic_placeholder($embed, $matches[0]);
+			return str_replace('http:', '', grid_generic_placeholder($embed, $matches[0]));
 		}
 	}, $content);
 	return $content;
 }
 add_filter('the_content', 'grid_embed_placeholder');
-
-function grid_protocol_agnostic_urls($content) {
-	$home_url = home_url();
-	$protocol_agnostic_url = str_replace('http:', '', $home_url);
-	$content = str_replace($home_url, $protocol_agnostic_url, $content);
-	return $content;
-}
-add_filter('the_content', 'grid_protocol_agnostic_urls', 99);
 
 function grid_youtube_placeholder($embed, $default) {
 	extract($embed);
@@ -647,12 +647,12 @@ function grid_youtube_poster_image($id) {
 	global $post;
 	$image_url = get_post_meta($post->ID, 'youtube_poster_image', true);
 	if (empty($image_url)) {
-		$image_url = "http://img.youtube.com/vi/$id/maxresdefault.jpg";
+		$image_url = "//img.youtube.com/vi/$id/maxresdefault.jpg";
 		$image = grid_download($image_url);
 		if (!empty($image)) {
 			update_post_meta($post->ID, 'youtube_poster_image', $image_url);
 		} else {
-			$image_url = "http://img.youtube.com/vi/$id/mqdefault.jpg";
+			$image_url = "//img.youtube.com/vi/$id/mqdefault.jpg";
 			$image = grid_download($image_url);
 			if (empty($image)) {
 				$image_url = 'default';
