@@ -618,6 +618,14 @@ function grid_embed_placeholder($content) {
 }
 add_filter('the_content', 'grid_embed_placeholder');
 
+function grid_protocol_agnostic_urls($content) {
+	$home_url = home_url();
+	$protocol_agnostic_url = str_replace('http:', '', $home_url);
+	$content = str_replace($home_url, $protocol_agnostic_url, $content);
+	return $content;
+}
+add_filter('the_content', 'grid_protocol_agnostic_urls', 99);
+
 function grid_youtube_placeholder($embed, $default) {
 	extract($embed);
 	$src = esc_attr(add_query_arg('autoplay', '1', $src));
