@@ -154,6 +154,16 @@ blockquote {
   border-left: 4px solid #dedede;
   padding-left: 20px; }
 
+pre code {
+  display: block;
+  border: 2px solid #dedede;
+  background: #f2f2f2;
+  padding: 15px 20px;
+  margin-bottom: 14px;
+  font-size: 0.85em;
+  line-height: 1.3em;
+  overflow: auto; }
+
 .wp-caption {
   margin-bottom: 14px; }
 
