@@ -21,7 +21,11 @@ function initGrid() {
 }
 window.grid = grid;
 initGrid();
-var socket = io('http://' + location.hostname + ':3000');
+var socketURL = 'http://' + location.hostname + ':3000';
+if (location.href.match(/proxy=1/)) {
+	socketURL = location.protocol + '//' + location.hostname;
+}
+var socket = io(socketURL);
 
 var header = document.getElementsByTagName('header');
 if (header.length < 1) {
