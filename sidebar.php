@@ -25,7 +25,7 @@
 				</ul>
 			</div>
 			<div class="column">
-				<h2>Projects</h2>
+				<h2>Big Projects</h2>
 				<ul>
 					<li>
 						<a href="http://youarehere.network/">You Are Here</a>
@@ -51,6 +51,13 @@
 					<li>
 						<a href="http://www.moma.org/interactives/exhibitions/2008/elasticmind/#/17/">Atlas Gloves</a>
 					</li>
+				</ul>
+				<h2>Small Projects</h2>
+				<ul>
+					<li><a href="/whale/">The Whale</a></li>
+					<li><a href="http://onerothkoperhour.com/">One Rothko Per Hour</a></li>
+					<li><a href="/slowtv/beefra/">Beefra Chill Time</a></li>
+					<li><a href="/mubi/">What’s Playing on MUBI?</a></li>
 				</ul>
 			</div>
 			<br class="clear">
