@@ -71,7 +71,8 @@ function grid_get_gravatar_url($email, $size) {
 		$image = file_get_contents("http://gravatar.com/avatar/$hash?s=$size&amp;d=mm");
 		file_put_contents("$dir/$hash-$size.jpg", $image);
 	}
-	return $upload_dir['baseurl'] . "/gravatar/$hash-$size.jpg";
+	$base_url = str_replace('http:', '', $upload_dir['baseurl']);
+	return "$base_url/gravatar/$hash-$size.jpg";
 }
 
 add_filter('grid_description', 'grid_description_image');
