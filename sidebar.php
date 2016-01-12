@@ -5,8 +5,7 @@
 			<div class="column">
 				<h2>Currently</h2>
 				<p>
-					I am an experienced full-stack web freelancer.
-					<a href="mailto:dan@phiffer.org?subject=Let%E2%80%99s%20work%20together">Let’s&nbsp;work&nbsp;together</a>
+					I help with data at <a href="https://mapzen.com/">Mapzen</a>
 				</p>
 				<h2>Previously</h2>
 				<ul>
