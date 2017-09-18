@@ -449,7 +449,7 @@ function grid_og_description() {
   global $post, $wp_query;
   $description = get_bloginfo('description');
 	if (is_single()) {
-		$description = grid_description($post->post_content);
+		$description = grid_description(get_the_excerpt());
 		$description = strip_tags($description);
 		$description = preg_replace('/\s+/ms', ' ', $description);
 		$description = trim($description);
