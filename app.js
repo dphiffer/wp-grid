@@ -1,16 +1,12 @@
 /*
 
 Usage:
-	nodejs app.js [CORS hostname]
+	nodejs app.js
 
 */
 
 var io = require('socket.io')();
-if (process.argv.length > 2) {
-	io.set('origins', 'http://' + process.argv[2] + ':80');
-} else {
-	io.set('origins', 'http://phiffer.org:80');
-}
+//io.set('origins', '*');
 
 var grid = [];
 
