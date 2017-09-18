@@ -72,10 +72,28 @@
 						<a href="https://instagram.com/dphiffer">Instagram</a>
 					</li>
 					<li>
-						<a href="http://mlkshk.com/user/dphiffer">Mlkshk</a>
+						<a href="http://mltshp.com/user/dphiffer">mltshp</a>
 					</li>
 					<li>
-						<a href="http://stellar.io/dphiffer">Stellar</a>
+						<?php
+
+						$month = date('m');
+
+						if ($month < '03') {
+							$playlist = '1pE8LCCCRbdiVNZkeivxcq'; // Almost Spring
+						} else if ($month < '06') {
+							$playlist = '5va5ltqJkbyiqb8JmDmKyb'; // Almost Summer
+						} else if ($month < '09') {
+							$playlist = '31Zx7HkUwNL7l4HlmVVDI0'; // Almost Fall
+						} else {
+							$playlist = '0a1vvEXHl6gT90dgvcl1CI'; // Almost Winter
+						}
+
+						?>
+						<a href="https://open.spotify.com/user/dphiffer/playlist/<?php echo $playlist; ?>">Spotify</a>
+					</li>
+					<li>
+						<a href="https://getpocket.com/@dphiffer">Pocket</a>
 					</li>
 					<li>
 						<a href="https://pinboard.in/u:dphiffer">Pinboard</a>
