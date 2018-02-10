@@ -9,6 +9,9 @@ if (is_single() && has_category('photos', $post)) {
 ?>
 <article id="<?php echo $id; ?>" <?php post_class(); ?>>
   <h2 class="title"><a href="<?php echo grid_link(); ?>"><?php the_title(); ?></a><?php echo grid_link_domain(); ?></h2>
+  <?php if ($post->private) { ?>
+    <div class="meta title">🔒 This post is private, you gotta know the funky URL to access it.</div>
+  <?php } ?>
   <div class="content">
     <?php
     

@@ -4,28 +4,44 @@
 		<section>
 			<div class="column">
 				<h2>Currently</h2>
-				<p>
-					I help with data at <a href="https://mapzen.com/">Mapzen</a>
-				</p>
+				<p>Exploring what to do next.</p>
 				<h2>Previously</h2>
 				<ul>
 					<li>
-						<a href="http://www.newyorker.com/">New Yorker Tech</a>
+						<a href="https://mapzen.com/">Mapzen</a>
 					</li>
 					<li>
-						<a href="http://www.moma.org/">MoMA Digital Media</a>
+						<a href="https://www.newyorker.com/">New Yorker Tech</a>
+					</li>
+					<li>
+						<a href="https://www.moma.org/">MoMA Digital Media</a>
 					</li>
 					<li>
 						<a href="https://www.crunchbase.com/organization/outside-in">Outside.in</a>
 					</li>
 					<li>
-						<a href="http://hellodesign.com/">Hello Design</a>
+						<a href="https://www.hellodesign.com/">Hello Design</a>
+					</li>
+				</ul>
+				<h2>Announcements</h2>
+				<a href="http://eepurl.com/ccb7n">📬 Subscribe to my NYC-centric email announcement list</a>
+				<?php
+
+				// See also: curl --user ":8160b20eab8c31c52bb57d81ac96b830-us2" "https://us2.api.mailchimp.com/3.0/campaigns?sort_field=send_time&count=1&sort_dir=desc"				
+
+				?>
+				<ul class="announcements">
+					<li>
+						<strong>Latest:</strong> <a href="http://mailchi.mp/88465383ccad/the-most-last-minute-holiday-drinks">The most last minute holiday drinks</a>
 					</li>
 				</ul>
 			</div>
 			<div class="column">
 				<h2>Projects</h2>
 				<ul>
+					<li>
+						<a href="https://smoldata.org/">Smol Data</a>
+					</li>
 					<li>
 						<a href="http://youarehere.network/">You Are Here</a>
 					</li>
@@ -122,13 +138,10 @@
 						<a href="https://github.com/dphiffer">GitHub</a>
 					</li>
 					<li>
-						<a href="http://eepurl.com/ccb7n">Announcement list</a>
-					</li>
-					<li>
 						<a href="/press/">Selected press</a>
 					</li>
 					<li>
-						<a href="/dan_phiffer_cv.pdf">CV / résumé</a>
+						<a href="/dan_phiffer_resume.pdf">Résumé</a>
 					</li>
 				</ul>
 			</div>
