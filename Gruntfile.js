@@ -4,6 +4,9 @@ module.exports = function(grunt) {
 		jshint: {
 			dist: {
 				src: ['js/header-grid.js']
+			},
+			options: {
+				reporterOutput: ""
 			}
 		},
 		uglify: {
