@@ -91,6 +91,9 @@
 						<a href="https://social.coop/@dphiffer">Mastodon</a>
 					</li>
 					<li>
+						<a href="https://www.are.na/dan-phiffer">Are.na</a>
+					</li>
+					<li>
 						<a href="https://bandcamp.com/dphiffer">Bandcamp</a>
 					</li>
 					<li>
