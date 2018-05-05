@@ -4,7 +4,7 @@
 		<section>
 			<div class="column">
 				<h2>Currently</h2>
-				<p>Exploring what to do next.</p>
+				<p>Software developer at ACLU.</p>
 				<h2>Previously</h2>
 				<ul>
 					<li>
@@ -85,10 +85,19 @@
 						<a href="https://twitter.com/dphiffer">Twitter</a>
 					</li>
 					<li>
-						<a href="https://instagram.com/dphiffer">Instagram</a>
+						<a href="http://mltshp.com/user/dphiffer">mltshp</a>
 					</li>
 					<li>
-						<a href="http://mltshp.com/user/dphiffer">mltshp</a>
+						<a href="https://social.coop/@dphiffer">Mastodon</a>
+					</li>
+					<li>
+						<a href="https://bandcamp.com/dphiffer">Bandcamp</a>
+					</li>
+					<li>
+						<a href="https://facebook.com/dphiffer">Facebook</a>
+					</li>
+					<li>
+						<a href="https://instagram.com/dphiffer">Instagram</a>
 					</li>
 					<li>
 						<?php
